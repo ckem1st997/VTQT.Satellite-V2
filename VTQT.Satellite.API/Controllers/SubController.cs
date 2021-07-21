@@ -7,10 +7,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using VTQT.Satellite.API.Models;
 using VTQT.Satellite.Entity.Entity;
-using VTQT.Satellite.Service.SatelliteService.DataContext;
-using VTQT.Satellite.Service.SatelliteService.DIUnitOfWork;
+
 using VTQT.Satellite.Service.SatelliteService.Repository;
-using VTQT.Satellite.ShareMVC.Extensions;
 using VTQT.Satellite.ShareMVC.Models;
 
 namespace VTQT.Satellite.API.Controllers

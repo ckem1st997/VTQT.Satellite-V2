@@ -16,7 +16,6 @@ using System.Threading.Tasks;
 using VTQT.Satellite.Service.SatelliteService.DataContext;
 using VTQT.Satellite.Service.SatelliteService.DIUnitOfWork;
 using VTQT.Satellite.Service.SatelliteService.Repository;
-using VTQT.Satellite.ShareMVC.Extensions;
 using VTQT.Satellite.ShareMVC.Infrastructure.AutoMapper;
 using VTQT.Satellite.ShareMVC.Models;
 
@@ -49,7 +48,6 @@ namespace VTQT.Satellite.API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            MappingExtensions.Configure(app.ApplicationServices.GetService<IMapper>());
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

@@ -15,10 +15,17 @@ namespace VTQT.Satellite.API.Controllers
     {
 
         private readonly IHttpClientFactory _clientFactory;
-        public ApiController( IHttpClientFactory clientFactory)
+        public ApiController(IHttpClientFactory clientFactory)
         {
             _clientFactory = clientFactory;
         }
+
+
+
+        /// <summary>
+        /// lấy ra danh sách thành phố
+        /// </summary>
+        /// <returns>danh sách thành phố</returns>
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -30,6 +37,12 @@ namespace VTQT.Satellite.API.Controllers
                 return Ok(await response.Content.ReadAsStringAsync());
             return Ok(false);
         }
+
+        /// <summary>
+        /// lấy ra danh sách huyện theo id của thành phố
+        /// </summary>
+        /// <param name="id">id thành phố</param>
+        /// <returns>danh sách huyện theo id của thành phố</returns>
         [HttpGet("GetHuyen/{id}")]
         public async Task<IActionResult> GetHuyen(int id)
         {
@@ -41,6 +54,13 @@ namespace VTQT.Satellite.API.Controllers
                 return Ok(await response.Content.ReadAsStringAsync());
             return Ok(false);
         }
+
+
+        /// <summary>
+        /// lấy ra danh sách xã theo id của huyện
+        /// </summary>
+        /// <param name="id">id của huyện</param>
+        /// <returns>danh sách xã theo id của huyện</returns>
         [HttpGet("GetXa/{id}")]
         public async Task<IActionResult> GetXa(int id)
         {
