@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VTQT.Satellite.Service\VTQT.Satellite.Service.csproj" />
+    <ProjectReference Include="..\VTQT.Satellite.ShareMVC\VTQT.Satellite.ShareMVC.csproj" />
+  </ItemGroup>
+
+
+</Project>
