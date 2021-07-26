@@ -81,7 +81,7 @@ namespace VTQT.Satellite.ShareMVC.Models
 
     public enum Status
     {
-        ACTIVED, SUSPEND, DEACTIVE
+        ACTIVATED, SUSPENDED, DEACTIVATED
     }
 
     public partial class SubValidator : AbstractValidator<SubModel>
